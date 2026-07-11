@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Smashed avocado toast">
+  <rect width="800" height="600" fill="#f7efe3"/>
+  <rect x="70" y="80" width="660" height="440" rx="28" fill="#fffdf9"/>
+  <rect x="120" y="130" width="560" height="300" rx="18" fill="#f5e0b7"/>
+  <rect x="160" y="170" width="480" height="220" rx="12" fill="#6f4e2d" opacity="0.08"/>
+  <rect x="170" y="220" width="460" height="140" rx="20" fill="#efe1b8"/>
+  <path d="M250 270c0-70 45-120 100-120 60 0 100 50 100 120 0 30-20 60-50 70h-100c-30-10-50-40-50-70Z" fill="#4e9f43"/>
+  <path d="M315 215c10-25 30-40 55-40 28 0 47 18 57 46" stroke="#2f6d2d" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M275 305c15 20 40 30 65 30h75c25 0 50-10 65-30" stroke="#d68e3a" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M290 315c35 15 85 15 120 0" stroke="#7c4d16" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <circle cx="320" cy="250" r="8" fill="#f6e8c8"/>
+  <circle cx="355" cy="235" r="6" fill="#f6e8c8"/>
+  <circle cx="390" cy="245" r="7" fill="#f6e8c8"/>
+  <path d="M220 310c24-22 56-35 86-35h44c30 0 62 13 86 35" stroke="#bc7f2d" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M235 360h330" stroke="#c4a16b" stroke-width="12" stroke-linecap="round"/>
+  <path d="M250 360c0 25 20 43 45 43h155c25 0 45-18 45-43" fill="#b8833a" opacity="0.25"/>
+  <path d="M260 170c35-25 95-25 130 0" stroke="#8b5e2a" stroke-width="12" stroke-linecap="round" opacity="0.2"/>
+  <path d="M520 235c10-12 20-17 35-17" stroke="#7d6a49" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <circle cx="585" cy="190" r="42" fill="#c7a86f" opacity="0.25"/>
+  <circle cx="585" cy="190" r="18" fill="#e5c27d" opacity="0.55"/>
+</svg>

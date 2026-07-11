@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarya Cafe — Authentic Coffee & All-Day Breakfast</title>
+    <!-- Google Fonts: Kalam (Chalk/Hand-drawn display), Inter (Humanist Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">Zarya</a>
+            <nav class="nav-links">
+                <a href="#about">Наша история</a>
+                <a href="#menu">Меню</a>
+                <a href="#visit">Часы и визит</a>
+            </nav>
+            <a href="https://wa.me/996000000000?text=Hello!%20I'd%20like%20to%20book%20a%20table%20at%20Zarya." class="btn-book-table" target="_blank" rel="noopener noreferrer">Забронировать столик</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-left">
+                <h1 class="chalk-board-title">Настоящий кофе, обжаренный у нас</h1>
+                <p class="hero-subheading">Зерна из одной страны, медленно обжаренные, ручная заварка и завтрак целый день — с домашним хлебом, местными яйцами и сезонными травами.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/996000000000?text=Hello!%20I'd%20like%20to%20book%20a%20table%20at%20Zarya." class="btn-primary" target="_blank" rel="noopener noreferrer">Забронировать столик</a>
+                    <a href="#menu" class="btn-secondary">Посмотреть меню</a>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <!-- Chalkboard Frame containing Living Hand-Drawn Cup & Steam -->
+                <div class="chalkboard-frame">
+                    <div class="chalkboard-drawing-wrapper">
+                        <svg viewBox="0 0 300 350" class="chalkboard-svg" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- "Living" Chalk Squigglevision Filter -->
+                                <filter id="chalk-shiver" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise">
+                                        <animate attributeName="seed" values="1;2;3;4;5;6;7;8;9;10" dur="0.5s" repeatCount="indefinite" calcMode="discrete"/>
+                                    </feTurbulence>
+                                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+                                </filter>
+                            </defs>
+                            
+                            <!-- Blackboard Background Inside the SVG -->
+                            <rect width="100%" height="100%" fill="#2B1B14" rx="8" />
+
+                            <!-- Background Texture / Dusting lines to look like chalk smudge -->
+                            <path d="M10,20 Q80,10 150,15 T290,10" stroke="rgba(243, 233, 220, 0.05)" stroke-width="4" fill="none" filter="url(#chalk-shiver)" />
+                            <path d="M20,330 Q120,340 220,330 T280,335" stroke="rgba(243, 233, 220, 0.03)" stroke-width="3" fill="none" filter="url(#chalk-shiver)" />
+
+                            <!-- Tiny laurel leaf and "Zarya" chalk signature in corner -->
+                            <g filter="url(#chalk-shiver)" class="chalk-signature" opacity="0.6">
+                                <path d="M245,310 C248,302 258,302 262,310 C258,318 248,318 245,310 Z" fill="none" stroke="#5C6B4F" stroke-width="1.2" />
+                                <path d="M262,310 C265,302 275,302 279,310 C275,318 265,318 262,310 Z" fill="none" stroke="#5C6B4F" stroke-width="1.2" />
+                                <path d="M240,314 Q262,311 284,314" fill="none" stroke="#5C6B4F" stroke-width="1.5" />
+                                <text x="246" y="327" font-family="'Kalam', cursive" font-size="10" fill="#F3E9DC">Zarya</text>
+                            </g>
+
+                            <!-- Rising Steam Chalk Swirls -->
+                            <g class="steam-group" filter="url(#chalk-shiver)">
+                                <path d="M140,165 C120,135 155,105 130,75 C115,55 145,35 135,15" class="steam-swirl steam-swirl-1" />
+                                <path d="M152,163 C168,130 135,100 160,70 C175,50 142,30 155,12" class="steam-swirl steam-swirl-2" />
+                                <path d="M162,167 C140,140 172,110 148,80 C130,60 162,40 148,18" class="steam-swirl steam-swirl-3" />
+                            </g>
+
+                            <!-- Detailed Coffee Cup & Saucer Chalk Sketch -->
+                            <g class="cup-sketch-group" filter="url(#chalk-shiver)">
+                                <!-- Under-saucer Rust Shadow -->
+                                <path d="M78,285 L222,285" stroke="#B5652D" stroke-width="3" fill="none" opacity="0.6" />
+                                <path d="M92,288 L208,288" stroke="#B5652D" stroke-width="2.5" fill="none" opacity="0.5" />
+                                <path d="M110,291 L190,291" stroke="#B5652D" stroke-width="1.5" fill="none" opacity="0.4" />
+
+                                <!-- Saucer Outline (Double-stroked cream chalk) -->
+                                <path d="M60,270 C60,288 240,288 240,270" stroke="#F3E9DC" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                                <path d="M58,269 C58,290 242,290 242,269" stroke="#F3E9DC" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8" />
+                                <path d="M75,270 C75,280 225,280 225,270" stroke="#F3E9DC" stroke-width="1.5" fill="none" opacity="0.7" />
+
+                                <!-- Cup Base (Cream chalk) -->
+                                <path d="M110,265 C120,271 180,271 190,265" stroke="#F3E9DC" stroke-width="3" fill="none" />
+                                <path d="M108,266 C120,272 180,272 192,266" stroke="#F3E9DC" stroke-width="1.5" fill="none" opacity="0.8" />
+
+                                <!-- Cup Body Walls (Double-stroked cream chalk) -->
+                                <path d="M95,180 C90,225 110,265 110,265" stroke="#F3E9DC" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                                <path d="M97,179 C92,224 111,264 111,264" stroke="#F3E9DC" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7" />
+                                
+                                <path d="M205,180 C210,225 190,265 190,265" stroke="#F3E9DC" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                                <path d="M203,179 C208,224 189,264 189,264" stroke="#F3E9DC" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7" />
+
+                                <!-- Rust Accent Shadows inside Cup Walls -->
+                                <path d="M102,188 C98,220 114,255 114,255" stroke="#B5652D" stroke-width="2.5" fill="none" opacity="0.65" />
+                                <path d="M198,188 C202,220 186,255 186,255" stroke="#B5652D" stroke-width="2.5" fill="none" opacity="0.65" />
+
+                                <!-- Cross-Hatching Shading inside Body -->
+                                <path d="M115,200 L110,212 M120,205 L115,217 M125,210 L120,222 M130,215 L125,227 M135,220 L130,232" stroke="#B5652D" stroke-width="1.2" fill="none" opacity="0.5" />
+                                <path d="M120,248 L128,258 M128,249 L136,259 M136,250 L144,260 M144,251 L152,261 M152,251 L160,261 M160,251 L168,261 M168,250 L176,260 M176,248 L184,258" stroke="#F3E9DC" stroke-width="1" fill="none" opacity="0.45" />
+
+                                <!-- Cup Rim (Double-stroked outer and inner) -->
+                                <path d="M95,180 C95,170 205,170 205,180 C205,190 95,190 95,180 Z" stroke="#F3E9DC" stroke-width="3" fill="none" />
+                                <path d="M97,180 C97,172 203,172 203,180 C203,188 97,188 97,180 Z" stroke="#F3E9DC" stroke-width="1.5" fill="none" opacity="0.75" />
+                                
+                                <!-- Rust Highlight on Rim -->
+                                <path d="M100,183 C110,188 190,188 200,183" stroke="#B5652D" stroke-width="2" fill="none" opacity="0.7" />
+
+                                <!-- Handle (Double-stroked cream and rust highlight) -->
+                                <path d="M205,195 C235,190 255,210 245,235 C240,248 215,255 195,250" stroke="#F3E9DC" stroke-width="3.5" fill="none" stroke-linecap="round" />
+                                <path d="M204,197 C232,193 252,211 243,234 C238,246 216,253 196,249" stroke="#F3E9DC" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7" />
+                                <path d="M210,202 C230,200 242,212 238,228" stroke="#B5652D" stroke-width="2.2" fill="none" opacity="0.65" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Barista pulling espresso shot at Zarya" class="about-img">
+                </div>
+                <div class="about-text-content">
+                    <span class="section-tag">Наша философия</span>
+                    <h2 class="section-title">Там, где рассвет встречается с идеальной обжаркой</h2>
+                    <p>Zarya означает «рассвет» или «восход солнца». Для нас это символ начала дня, спокойного утра и ритуала приготовления первой живительной чашки. Мы закупаем зелёный кофе у небольших семейных ферм в Восточной Африке и Латинской Америке, оплачивая выше справедливой цены, чтобы поддерживать устойчивое сельское хозяйство.</p>
+                    <p>Каждая партия обжаривается в нашем микрокофемолочном барабане, прямо в уголке кафе. Мы обжариваем её легко, чтобы сохранить естественную фруктовость, яркую кислотность и сложную сладость каждого сорта.</p>
+                    <p>Наше кафе создано так, чтобы ощущаться как продолжение вашего дома — уютное место, где аромат свежей обжарки смешивается с мягкой музыкой и тёплым разговором. Независимо от того, ищете ли вы тихий уголок для чтения или встречаетесь с друзьями за свежеподнятым эспрессо, вы найдёте пространство, созданное с заботой, теплом и вниманием к деталям. Каждая мелочь — от деревянных столов до тёплых терракотовых кружек — выбрана, чтобы celebrate the craft of slow living and fine coffee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section (Artisanal Chalk-style Menu Card) -->
+    <section id="menu" class="menu-section">
+        <div class="section-container">
+            <div class="menu-header text-center">
+                <span class="section-tag dark-tag">На доске</span>
+                <h2 class="section-title chalkboard-style">Свежезаваренное и приготовленное каждый день</h2>
+                <p class="menu-subtitle">Мы подаём простую еду, приготовленную красиво. Наша кухня работает весь день, предлагая уютные блюда из местных, полезных ингредиентов.</p>
+            </div>
+
+            <!-- Cream textured menu board container -->
+            <div class="menu-board-cream">
+                <div class="menu-board-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-card">
+                        <div class="menu-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=600&q=80" alt="Double Espresso" class="menu-card-image">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Двойной эспрессо</h3>
+                                <span class="menu-card-price">180 сом</span>
+                            </div>
+                            <p class="menu-card-desc">Эспрессо из одного сорта с нотами тёмного какао и сливы.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-card">
+                        <div class="menu-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Flat White" class="menu-card-image">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Флет уайт</h3>
+                                <span class="menu-card-price">220 сом</span>
+                            </div>
+                            <p class="menu-card-desc">Двойной эспрессо с гладким молоком, взбитым в тонкую пену.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-card">
+                        <div class="menu-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80" alt="Pour Over V60" class="menu-card-image">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Пуровер V60</h3>
+                                <span class="menu-card-price">200 сом</span>
+                            </div>
+                            <p class="menu-card-desc">Фильтр-кофе ручной заварки из одного сорта. Нежный, чистый и цветочный.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-card">
+                        <div class="menu-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=600&q=80" alt="Sourdough Toast" class="menu-card-image">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Тост из закваски</h3>
+                                <span class="menu-card-price">250 сом</span>
+                            </div>
+                            <p class="menu-card-desc">Толстый тост из домашней закваски с солёным маслом и сладким ягодным вареньем.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-card">
+                        <div class="menu-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=600&q=80" alt="Fried Eggs" class="menu-card-image">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Жареные яйца</h3>
+                                <span class="menu-card-price">320 сом</span>
+                            </div>
+                            <p class="menu-card-desc">Яйца с пастбищ, томатным рагу, пряными сладкими перцами и дикой фетой.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="menu-card">
+                        <div class="menu-card-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&w=600&q=80" alt="Smashed Avocado" class="menu-card-image">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-card-title">Авокадо тост</h3>
+                                <span class="menu-card-price">300 сом</span>
+                            </div>
+                            <p class="menu-card-desc">Авокадо, маринованный красный лук, микрозелень и обжаренные семена на тёплой закваске.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit / Booking Section -->
+    <section id="visit" class="visit-section">
+        <div class="section-container">
+            <div class="visit-grid">
+                <div class="visit-details-box">
+                    <span class="section-tag">Запланируйте визит</span>
+                    <h2 class="section-title">Присоединяйтесь к нашему утреннему ритуалу</h2>
+                    
+                    <div class="details-list">
+                        <div class="detail-block">
+                            <h4>Часы работы</h4>
+                            <p>Понедельник – Пятница: 7:00 – 17:00</p>
+                            <p>Суббота – Воскресенье: 8:00 – 18:00</p>
+                        </div>
+                        
+                        <div class="detail-block">
+                            <h4>Где нас найти</h4>
+                            <p>42 Espresso Boulevard, Coffee District</p>
+                            <p>Сиэтл, WA 98101</p>
+                        </div>
+
+                        <div class="detail-block">
+                            <h4>Свяжитесь с нами</h4>
+                            <p>Email: hello@zaryacafe.com</p>
+                            <p>WhatsApp: +996 000 000-000</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/996000000000?text=Hello!%20I'd%20like%20to%20book%20a%20table%20at%20Zarya." class="btn-primary" target="_blank" rel="noopener noreferrer">Забронировать через WhatsApp</a>
+                </div>
+                
+                <div class="visit-map-mockup">
+                    <div class="map-overlay">
+                        <div class="map-card">
+                            <h3>Zarya Cafe</h3>
+                            <p>Обжарка и кухня весь день</p>
+                            <a href="https://maps.google.com" target="_blank" class="map-link">Открыть в Google Maps</a>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Atmospheric cafe setup" class="visit-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo footer-logo">Zarya</span>
+                    <p>Создаём утренние ритуалы и обжариваем настоящий кофе из одного сорта с заботой и вниманием с 2018 года.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Навигация</h4>
+                    <a href="#about">Наша история</a>
+                    <a href="#menu">Меню</a>
+                    <a href="#visit">Часы и визит</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Соцсети</h4>
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+                    <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+                    <a href="https://wa.me/996000000000" target="_blank" rel="noreferrer">Чат WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zarya Cafe. Все права защищены. Создано для настоящих ценителей кофе.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
